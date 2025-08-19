@@ -33,7 +33,7 @@ const handleSubmit = async (e) => {
     }
 
     try{
-        submitBtnLogo.src = "../assets/loading.svg";
+        submitBtnLogo.src = "./src/assets/loading.svg";
         submitBtnTxt.innerText = "Sending";
         contactSubmitBtn.disabled = true;
         contactSubmitBtn.classList.remove("cursor-pointer");
@@ -43,10 +43,10 @@ const handleSubmit = async (e) => {
 
         contactSubmitBtn.classList.remove("cursor-progress");
         contactSubmitBtn.classList.add("cursor-pointer");
-        submitBtnLogo.src = "../assets/check.svg";
+        submitBtnLogo.src = "./src/assets/check.svg";
         submitBtnTxt.innerText = "Sent!";
     } catch(err){
-        submitBtnLogo.src = "../assets/send.svg";
+        submitBtnLogo.src = "./src/assets/send.svg";
         submitBtnTxt.innerText = "Send";
     } finally {
         clearContactForm();
@@ -54,7 +54,7 @@ const handleSubmit = async (e) => {
         contactSubmitBtn.classList.remove("cursor-progress");
         contactSubmitBtn.classList.add("cursor-pointer");
         setTimeout(() => {
-            submitBtnLogo.src = "../assets/send.svg";
+            submitBtnLogo.src = "./src/assets/send.svg";
             submitBtnTxt.innerText = "Send";
         }, 5000);
     }
