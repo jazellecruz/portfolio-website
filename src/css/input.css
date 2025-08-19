@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {  
+    --color-dark-bg: #111112;
+}
+
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'ss03' 1, 'cv02' 1, 'cv11' 1; /* fix for Chrome */
+}
+
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+}
